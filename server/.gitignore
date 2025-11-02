@@ -1,9 +1,4 @@
-# client
-client/node_modules
-client/package-lock.json
-
-
-# server
-server/node_modules
-server/package-lock.json
-server/config.env
+# Ignore the node_modules folder
+node_modules/
+# Ignore the package-lock.json file
+package-lock.json
