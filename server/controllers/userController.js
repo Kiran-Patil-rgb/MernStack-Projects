@@ -134,7 +134,7 @@ const handleOTPVerification = async (req, res) => {
         console.log(updateUserObject)
 
         // remove the temp otp
-        redisClient.del(`email:${email}`)
+        redisCllient.del(`email:${email}`)
 
         res.status(202).json({ message: "otp verified successfully please head to login !" })
 
