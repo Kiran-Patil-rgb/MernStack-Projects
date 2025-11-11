@@ -2,13 +2,12 @@ import express from "express"
 
 import { createJob, getJobData, handleJobAction, handleJobApplication } from "../controllers/jobController.js"
 import { AuthUser } from "../middlewares/AuthUser.js"
-import { authCompany } from "../middlewares/AuthCompany.js"
 
 const jobRouter = express.Router()
 
-jobRouter.post("/add-job", authCompany, createJob)
+// jobRouter.post("/add-job", authCompany, createJob)
 
-jobRouter.post("/job-action/:action/:jobId", authCompany, handleJobAction)
+// jobRouter.post("/job-action/:action/:jobId", authCompany, handleJobAction)
 
 jobRouter.post("/apply-for-job/:jobId", AuthUser, handleJobApplication)
 

@@ -78,9 +78,9 @@ let test = (req, res) => {
 
 let handleUserRegister = async (req, res) => {
     try {
-        let { name, phone, email, address, dob, qualifications, password } = req.body
+        let { name, phone, email, address, dob, password } = req.body
 
-        if (!name || !phone || !email || !address || !dob || !qualifications || !password) throw ("invalid/missing data !")
+        if (!name || !phone || !email || !address || !dob || !password) throw ("invalid/missing data !")
 
         // check if user exits
         let checkIfUserExits = await userModel.findOne({ $or: [{ "email.userEmail": email }, { "phone": phone }] })
@@ -134,7 +134,7 @@ const handleOTPVerification = async (req, res) => {
         console.log(updateUserObject)
 
         // remove the temp otp
-        redisCllient.del(`email:${email}`)
+        redisClient.del(`email:${email}`)
 
         res.status(202).json({ message: "otp verified successfully please head to login !" })
 

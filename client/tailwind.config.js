@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -6,10 +7,14 @@ export default {
   ], theme: {
     extend: {
       colors: {
-        light: "#EFECE3",
-        secondary: "#8FABD4",
-        primary: "#4A70A9",
-        dark: "#000000"
+        purple: "#9112BC",
+        lightpur: "#AE75DA",
+        offbrown: "#E9E294",
+        offwhite: "#FFFCB8",
+         dark: "#000000",
+         light: "#EFECE3",
+         primary:'#9112BC',
+
       }
     },
   },
